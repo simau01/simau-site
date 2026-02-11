@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIMAU – De A a Z.</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0D1B2A;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.logo {
+    font-size: 48px;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+}
+
+.logo::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #F77F00;
+    transform: skewX(-20deg);
+}
+
+.tagline {
+    font-size: 20px;
+    color: #F77F00;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 22px;
+    margin-top: 30px;
+}
+
+.button {
+    margin-top: 40px;
+    padding: 15px 35px;
+    background-color: #F77F00;
+    color: #0D1B2A;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+section {
+    padding: 60px 10%;
+    background-color: white;
+    color: #0D1B2A;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #0D1B2A;
+    color: white;
+}
+
+@media(max-width:768px){
+    .logo {
+        font-size: 36px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SIMAU</div>
+    <div class="tagline">De A a Z.</div>
+    <div class="subtitle">
+        Você delega. A gente resolve.<br>
+        Obras, reformas e manutenção sem dor de cabeça.
+    </div>
+    <a href="#" class="button">Solicitar Orçamento</a>
+</header>
+
+<section>
+    <h2>Quem Somos</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+        A Simau assume a gestão completa de obras, reformas e manutenção predial,
+        oferecendo soluções integradas do planejamento à entrega final.
+        Você cuida do seu negócio. Nós cuidamos do resto.
+    </p>
+</section>
+
+<section>
+    <h2>Nossos Serviços</h2>
+    <div class="services">
+        <div class="card">Construção residencial e comercial</div>
+        <div class="card">Reformas corporativas e residenciais</div>
+        <div class="card">Manutenção predial preventiva e corretiva</div>
+        <div class="card">Pintura interna e externa</div>
+        <div class="card">Manutenção de ar-condicionado</div>
+        <div class="card">Reparos hidráulicos</div>
+        <div class="card">Infraestrutura elétrica</div>
+        <div class="card">Infraestrutura de dados</div>
+        <div class="card">Locação e prestação de serviços</div>
+    </div>
+</section>
+
+<section>
+    <h2>Contato</h2>
+    <p style="text-align:center;">
+        WhatsApp: Em breve<br>
+        E-mail: Em breve
+    </p>
+</section>
+
+<footer>
+    SIMAU – De A a Z.<br>
+    © 2026 Simau Soluções Integradas LTDA
+</footer>
+
+</body>
+</html>
