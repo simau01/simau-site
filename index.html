@@ -1,195 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SIMAU – De A a Z</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIMAU – De A a Z</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --azul:#2C3A67;      /* Azul do fundo (bem próximo do seu print) */
-      --laranja:#F77F00;   /* Laranja da marca */
-      --branco:#FFFFFF;
-      --card: rgba(0,0,0,.14);
-      --borda: rgba(255,255,255,.18);
-    }
+<style>
+:root{
+  --azul:#0D1B2A;      /* Azul oficial Pantone 2965C */
+  --laranja:#F77F00;  /* Laranja oficial Pantone 1585C */
+  --branco:#ffffff;
+}
 
-    *{ box-sizing:border-box; margin:0; padding:0; }
-    html, body{ height:100%; }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    body{
-      font-family:'Montserrat', sans-serif;
-      background: var(--azul);
-      color: var(--branco);
-    }
+body{
+  font-family:'Montserrat', sans-serif;
+  background-color:var(--azul);   /* 🔥 FUNDO TOTAL AZUL OFICIAL */
+  color:var(--branco);
+  text-align:center;
+}
 
-    .container{
-      width: min(1050px, 92vw);
-      margin: 0 auto;
-    }
+.hero{
+  padding:80px 20px;
+}
 
-    header{
-      text-align:center;
-      padding: 80px 0 48px;
-    }
+.logo{
+  max-width:420px;
+  width:90%;
+  margin-bottom:40px;
+}
 
-    .logo-img{
-      width: min(560px, 92vw);
-      height: auto;
-      display:block;
-      margin: 0 auto 26px;
-    }
+h1{
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:15px;
+}
 
-    .headline{
-      font-size: 30px;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
+p{
+  font-size:18px;
+  opacity:0.85;
+  margin-bottom:40px;
+}
 
-    .sub{
-      font-size: 20px;
-      opacity: .92;
-      line-height: 1.5;
-      margin-bottom: 26px;
-    }
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
 
-    .btns{
-      display:flex;
-      gap: 14px;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
+.btn-primary{
+  background:var(--laranja);
+  color:var(--azul);
+  padding:14px 30px;
+  border-radius:8px;
+  font-weight:700;
+  text-decoration:none;
+  transition:0.3s;
+}
 
-    a.btn{
-      display:inline-block;
-      padding: 14px 28px;
-      border-radius: 10px;
-      font-weight: 800;
-      text-decoration:none;
-      transition: .12s ease;
-      border: 2px solid transparent;
-    }
+.btn-primary:hover{
+  opacity:0.9;
+}
 
-    .btn-primary{
-      background: var(--laranja);
-      color: #101a33;
-    }
+.btn-secondary{
+  border:2px solid var(--branco);
+  color:var(--branco);
+  padding:12px 28px;
+  border-radius:8px;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s;
+}
 
-    .btn-outline{
-      background: transparent;
-      border-color: rgba(255,255,255,.35);
-      color: var(--branco);
-    }
+.btn-secondary:hover{
+  background:var(--branco);
+  color:var(--azul);
+}
 
-    a.btn:hover{
-      opacity:.9;
-      transform: translateY(-1px);
-    }
+section{
+  padding:80px 20px;
+}
 
-    section{
-      padding: 46px 0;
-      text-align:center;
-    }
-
-    h2{
-      font-size: 34px;
-      font-weight: 800;
-      margin-bottom: 14px;
-    }
-
-    .lead{
-      max-width: 920px;
-      margin: 0 auto;
-      font-size: 18px;
-      line-height: 1.75;
-      opacity: .95;
-    }
-
-    .grid{
-      margin-top: 22px;
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 14px;
-    }
-
-    .card{
-      background: var(--card);
-      border: 1px solid var(--borda);
-      border-radius: 14px;
-      padding: 16px;
-      font-weight: 700;
-    }
-
-    footer{
-      padding: 26px 0 34px;
-      text-align:center;
-      opacity:.85;
-      font-size: 13px;
-    }
-
-    @media (max-width: 640px){
-      header{ padding: 60px 0 42px; }
-      .headline{ font-size: 24px; }
-      .sub{ font-size: 18px; }
-      h2{ font-size: 28px; }
-      .lead{ font-size: 16.5px; }
-    }
-  </style>
+section h2{
+  font-size:28px;
+  margin-bottom:20px;
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <!-- NOME CERTO DO ARQUIVO QUE ESTÁ NO SEU GITHUB: logo-simau.png -->
-      <img class="logo-img" src="logo-simau.png" alt="SIMAU Logo">
 
-      <div class="headline">Você delega. A gente resolve.</div>
-      <div class="sub">Obras, reformas e manutenção sem dor de cabeça.</div>
+<div class="hero">
+  <img src="logo-simau.png" alt="SIMAU Logo" class="logo">
 
-      <div class="btns">
-        <a class="btn btn-primary" href="#contato">Solicitar Orçamento</a>
-        <a class="btn btn-outline" href="#servicos">Ver Serviços</a>
-      </div>
-    </div>
-  </header>
+  <h1>Você delega. A gente resolve.</h1>
+  <p>Obras, reformas e manutenção sem dor de cabeça.</p>
 
-  <main class="container">
-    <section id="sobre">
-      <h2>Quem Somos</h2>
-      <p class="lead">
-        A Simau assume a gestão completa de obras, reformas e manutenção predial,
-        oferecendo soluções integradas do planejamento à entrega final.<br><br>
-        <strong>Você cuida do seu negócio. Nós cuidamos do resto.</strong>
-      </p>
-    </section>
+  <div class="buttons">
+    <a href="#" class="btn-primary">Solicitar Orçamento</a>
+    <a href="#servicos" class="btn-secondary">Ver Serviços</a>
+  </div>
+</div>
 
-    <section id="servicos">
-      <h2>Serviços</h2>
-      <div class="grid">
-        <div class="card">Construção residencial e comercial</div>
-        <div class="card">Reformas corporativas e residenciais</div>
-        <div class="card">Manutenção predial preventiva e corretiva</div>
-        <div class="card">Pintura interna e externa</div>
-        <div class="card">Manutenção e higienização de ar-condicionado</div>
-        <div class="card">Reparos hidráulicos</div>
-        <div class="card">Infra elétrica</div>
-        <div class="card">Infra de dados</div>
-        <div class="card">Prestação de serviços e locação</div>
-      </div>
-    </section>
+<section>
+  <h2>Quem Somos</h2>
+  <p>A SIMAU assume a gestão completa de obras, reformas e manutenção predial, oferecendo soluções integradas do planejamento à entrega final.</p>
+  <p><strong>Você cuida do seu negócio. Nós cuidamos do resto.</strong></p>
+</section>
 
-    <section id="contato">
-      <h2>Contato</h2>
-      <p class="lead">
-        WhatsApp: <strong>Em breve</strong><br>
-        E-mail: <strong>Em breve</strong><br>
-        Site: <strong>simau.com.br</strong>
-      </p>
-    </section>
+<section id="servicos">
+  <h2>Serviços</h2>
+</section>
 
-    <footer>© 2026 SIMAU • Todos os direitos reservados</footer>
-  </main>
 </body>
 </html>
