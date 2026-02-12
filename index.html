@@ -16,37 +16,39 @@ body {
 
 header {
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
+}
+
+.logo-container {
+    display: inline-block;
+    position: relative;
+}
+
+.roof {
+    width: 120px;
+    height: 4px;
+    background-color: #F77F00;
+    margin: 0 auto 15px auto;
+    transform: skewX(-25deg);
 }
 
 .logo {
-    font-size: 48px;
+    font-size: 52px;
     font-weight: 800;
-    position: relative;
-    display: inline-block;
-}
-
-.logo::before {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #F77F00;
-    transform: skewX(-20deg);
+    letter-spacing: 2px;
 }
 
 .tagline {
     font-size: 20px;
     color: #F77F00;
-    margin-top: 10px;
+    margin-top: 8px;
     font-weight: 600;
 }
 
 .subtitle {
     font-size: 22px;
     margin-top: 30px;
+    line-height: 1.6;
 }
 
 .button {
@@ -56,12 +58,17 @@ header {
     color: #0D1B2A;
     text-decoration: none;
     font-weight: 700;
-    border-radius: 4px;
+    border-radius: 6px;
     display: inline-block;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #ffa733;
 }
 
 section {
-    padding: 60px 10%;
+    padding: 70px 10%;
     background-color: white;
     color: #0D1B2A;
 }
@@ -79,8 +86,8 @@ section h2 {
 
 .card {
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    border: 1px solid #eee;
+    border-radius: 8px;
     font-weight: 500;
 }
 
@@ -93,7 +100,7 @@ footer {
 
 @media(max-width:768px){
     .logo {
-        font-size: 36px;
+        font-size: 38px;
     }
 }
 </style>
@@ -102,7 +109,10 @@ footer {
 <body>
 
 <header>
-    <div class="logo">SIMAU</div>
+    <div class="logo-container">
+        <div class="roof"></div>
+        <div class="logo">SIMAU</div>
+    </div>
     <div class="tagline">De A a Z.</div>
     <div class="subtitle">
         Você delega. A gente resolve.<br>
