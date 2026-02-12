@@ -4,91 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SIMAU – De A a Z.</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --navy:#0D1B2A;     /* Azul marinho oficial */
-      --orange:#F77F00;   /* Laranja oficial */
+      --navy-1:#0B1726;   /* base */
+      --navy-2:#0D1B2A;   /* oficial */
+      --navy-3:#122B46;   /* brilho leve */
+      --orange:#F77F00;
       --white:#FFFFFF;
       --text:#0D1B2A;
-      --soft:#f5f6f7;
       --border:#e7e7e7;
+      --soft:#f6f7f9;
     }
 
     *{ box-sizing:border-box; }
-
     body{
       margin:0;
       font-family:'Montserrat',sans-serif;
-      background:var(--navy);
-      color:var(--white);
+      color: var(--white);
+      background: var(--navy-2);
     }
 
-    /* HERO */
+    /* HERO com "cara" do mock */
     header{
-      padding: 92px 20px 70px;
-      text-align:center;
-      background: var(--navy);
-    }
-
-    .brand{
-      display:inline-flex;
-      flex-direction:column;
+      min-height: 78vh;
+      display:flex;
       align-items:center;
-      gap: 10px;
+      justify-content:center;
+      padding: 90px 20px 70px;
+      text-align:center;
+
+      /* fundo com degradê + vinheta (parecido com a imagem) */
+      background:
+        radial-gradient(900px 520px at 50% 10%, rgba(18,43,70,.65), rgba(13,27,42,0) 60%),
+        radial-gradient(900px 520px at 50% 0%, rgba(255,255,255,.06), rgba(255,255,255,0) 55%),
+        linear-gradient(180deg, var(--navy-1), var(--navy-2));
     }
 
-    /* Telhado "duas águas" minimalista */
-    .roof{
-      width: 190px;
-      height: 36px;
-      position: relative;
-    }
-    .roof::before,
-    .roof::after{
-      content:"";
-      position:absolute;
-      top: 20px;
-      width: 110px;
-      height: 6px;
-      background: var(--orange);
-      border-radius: 3px;
-    }
-    .roof::before{
-      left: 0;
-      transform: rotate(-20deg);
-      transform-origin: left center;
-    }
-    .roof::after{
-      right: 0;
-      transform: rotate(20deg);
-      transform-origin: right center;
+    .wrap{
+      width: min(980px, 100%);
+      margin: 0 auto;
     }
 
-    .logo{
-      font-size: 56px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      line-height: 1;
-      margin: 0;
-    }
-
-    .tagline{
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--orange);
-      margin: 0;
+    .brand-logo{
+      width: 520px;     /* tamanho desktop */
+      max-width: 88vw;  /* responsivo */
+      height: auto;
+      display:block;
+      margin: 0 auto 24px auto;
+      filter: drop-shadow(0 10px 22px rgba(0,0,0,.35));
     }
 
     .headline{
-      margin-top: 26px;
       font-size: 22px;
       line-height: 1.6;
-      max-width: 760px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 10px auto 0;
+      max-width: 820px;
       opacity: .98;
     }
 
@@ -106,19 +78,19 @@
       border-radius: 10px;
       font-weight: 800;
       text-decoration:none;
-      transition: transform .12s ease, opacity .12s ease;
+      transition: opacity .12s ease, transform .12s ease;
       border: 2px solid transparent;
-      cursor: pointer;
+      cursor:pointer;
     }
     .btn:active{ transform: scale(.98); }
 
     .btn-primary{
       background: var(--orange);
-      color: var(--navy);
+      color: var(--navy-2);
     }
     .btn-secondary{
       background: transparent;
-      border-color: rgba(255,255,255,.28);
+      border-color: rgba(255,255,255,.25);
       color: var(--white);
       opacity: .95;
     }
@@ -138,7 +110,6 @@
       text-align:center;
       font-size: 28px;
       margin: 0 0 28px;
-      letter-spacing: .2px;
     }
 
     .lead{
@@ -148,22 +119,6 @@
       font-size: 16.5px;
       line-height: 1.75;
       color: #223042;
-    }
-
-    .grid{
-      margin-top: 36px;
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-    }
-
-    .card{
-      border: 1px solid var(--border);
-      background: var(--soft);
-      border-radius: 14px;
-      padding: 18px 18px;
-      font-weight: 600;
-      color: #1a2736;
     }
 
     .bullets{
@@ -177,7 +132,7 @@
     .bullet{
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 14px 14px;
+      padding: 14px;
       background: #fff;
       color:#1a2736;
       font-weight: 600;
@@ -188,7 +143,22 @@
       margin-right: 8px;
     }
 
-    /* CONTACT */
+    .grid{
+      margin-top: 36px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .card{
+      border: 1px solid var(--border);
+      background: var(--soft);
+      border-radius: 14px;
+      padding: 18px;
+      font-weight: 600;
+      color: #1a2736;
+    }
+
     .contact-box{
       max-width: 820px;
       margin: 0 auto;
@@ -198,20 +168,15 @@
       padding: 22px;
       text-align:center;
     }
-
     .contact-line{
       margin: 8px 0;
       font-weight: 600;
       color:#1a2736;
     }
-    .muted{
-      color:#5a6b7e;
-      font-weight: 600;
-    }
+    .muted{ color:#5a6b7e; font-weight:600; }
 
-    /* FOOTER */
     footer{
-      background: var(--navy);
+      background: var(--navy-2);
       color: var(--white);
       text-align:center;
       padding: 34px 16px;
@@ -222,12 +187,9 @@
       margin-top: 8px;
     }
 
-    /* Responsive */
     @media (max-width: 768px){
-      header{ padding: 72px 18px 56px; }
-      .logo{ font-size: 40px; letter-spacing: 1px; }
-      .roof{ width: 160px; height: 34px; }
-      .roof::before, .roof::after{ width: 92px; height: 6px; top: 20px; }
+      header{ padding: 70px 18px 56px; min-height: 70vh; }
+      .brand-logo{ width: 420px; margin-bottom: 18px; }
       section{ padding: 56px 7%; }
       .headline{ font-size: 19px; }
     }
@@ -236,20 +198,19 @@
 
 <body>
   <header>
-    <div class="brand">
-      <div class="roof" aria-hidden="true"></div>
-      <h1 class="logo">SIMAU</h1>
-      <p class="tagline">De A a Z.</p>
-    </div>
+    <div class="wrap">
+      <!-- IMPORTANTE: este arquivo precisa existir no repo -->
+      <img class="brand-logo" src="logo-simau.png" alt="SIMAU - De A a Z." />
 
-    <div class="headline">
-      <strong>Você delega. A gente resolve.</strong><br>
-      Obras, reformas e manutenção sem dor de cabeça.
-    </div>
+      <div class="headline">
+        <strong>Você delega. A gente resolve.</strong><br>
+        Obras, reformas e manutenção sem dor de cabeça.
+      </div>
 
-    <div class="cta-row">
-      <a class="btn btn-primary" href="#contato">Solicitar Orçamento</a>
-      <a class="btn btn-secondary" href="#servicos">Ver Serviços</a>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contato">Solicitar Orçamento</a>
+        <a class="btn btn-secondary" href="#servicos">Ver Serviços</a>
+      </div>
     </div>
   </header>
 
