@@ -3,219 +3,231 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>SIMAU Soluções Integradas | Construção, Reforma, Elétrica e Dados</title>
-  <meta name="description" content="Construção & Reforma, Instalações Elétricas, Infraestrutura de Dados e Manutenção Predial. Qualidade e compromisso em cada projeto." />
-  <meta name="theme-color" content="#141F30" />
-
-  <!-- Open Graph (preview em WhatsApp/LinkedIn) -->
-  <meta property="og:title" content="SIMAU Soluções Integradas" />
-  <meta property="og:description" content="Construção & Reforma • Elétrica • Infra de Dados • Manutenção Predial" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/simau-flyer.jpg" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css" />
+  <title>SIMAU — Construção & Reforma</title>
+  <meta name="description" content="Construção, reforma, elétrica, infraestrutura de dados e manutenção predial. Orçamento via WhatsApp." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="header">
-    <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="SIMAU">
-        <span class="brand__mark" aria-hidden="true">⚡</span>
-        <span class="brand__text">
-          <strong>SIMAU</strong>
-          <small>Soluções Integradas Ltda.</small>
-        </span>
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#inicio" aria-label="Ir para o início">
+        <img class="brand__logo" src="assets/logo.png" alt="SIMAU" />
       </a>
 
-      <nav class="nav" aria-label="Menu">
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
         <a href="#servicos">Serviços</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato" class="btn btn--sm">Orçar agora</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Contato</a>
       </nav>
 
-      <button class="hamb" id="hamb" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <a class="btn btn--whats" id="ctaTop" href="#" target="_blank" rel="noreferrer">
+        <span class="btn__dot"></span>
+        Solicitar Orçamento
+      </a>
+
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
 
-    <div class="mobile" id="mobile" hidden>
+    <div class="mobilemenu" id="mobilemenu" hidden>
+      <a href="#inicio">Início</a>
       <a href="#servicos">Serviços</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#projetos">Projetos</a>
+      <a href="#portfolio">Portfólio</a>
       <a href="#contato">Contato</a>
+      <a class="btn btn--whats mobilemenu__cta" id="ctaTopMobile" href="#" target="_blank" rel="noreferrer">
+        <span class="btn__dot"></span>
+        Solicitar Orçamento
+      </a>
     </div>
   </header>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero__grid">
-        <div class="hero__copy">
-          <p class="kicker">Qualidade e compromisso em cada projeto</p>
-          <h1>Construção & Reforma<br><span class="accent">Elétrica</span> e <span class="accent">Infra de Dados</span></h1>
-          <p class="lead">
-            Execução completa com padrão, segurança e acabamento.
-            Atendimento para obras, adequações, upgrades e manutenção predial.
-          </p>
+  <!-- Hero -->
+  <main id="inicio" class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__shade" aria-hidden="true"></div>
 
-          <div class="hero__cta">
-            <a class="btn" href="#contato">Solicitar orçamento</a>
-            <a class="btn btn--ghost" href="#servicos">Ver serviços</a>
+    <div class="container hero__content">
+      <div class="hero__left">
+        <div class="kicker">SIMAU • Soluções Integradas</div>
+        <h1 class="hero__title">CONSTRUÇÃO &amp; REFORMA</h1>
+        <p class="hero__subtitle">Infraestrutura elétrica e de dados • manutenção predial • obras e adequações</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" id="ctaHero" href="#" target="_blank" rel="noreferrer">Pedir orçamento agora</a>
+          <a class="btn btn--ghost" href="#servicos">Ver serviços</a>
+        </div>
+
+        <div class="trust">
+          <div class="trust__item">
+            <span class="trust__big">Atendimento rápido</span>
+            <span class="trust__small">Orçamento via WhatsApp</span>
           </div>
-
-          <div class="badges">
-            <div class="badge">✅ Prazo + qualidade</div>
-            <div class="badge">🧰 Equipe técnica</div>
-            <div class="badge">📍 Atuação sob demanda</div>
-          </div>
-        </div>
-
-        <div class="hero__media" aria-label="Banner SIMAU">
-          <img src="assets/simau-flyer.jpg" alt="SIMAU Soluções Integradas - Construção, Reforma, Elétrica e Dados" />
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVIÇOS -->
-    <section class="section" id="servicos">
-      <div class="container">
-        <div class="section__head">
-          <h2>Serviços</h2>
-          <p>Do planejamento à entrega: soluções integradas para sua obra e infraestrutura.</p>
-        </div>
-
-        <div class="cards">
-          <article class="card">
-            <div class="card__icon">🏗️</div>
-            <h3>Reformas e Obras</h3>
-            <p>Layout, drywall, pintura, pisos, hidráulica, adequações e melhorias com acabamento.</p>
-          </article>
-
-          <article class="card">
-            <div class="card__icon">⚡</div>
-            <h3>Instalações Elétricas</h3>
-            <p>Quadros, circuitos, tomadas, iluminação, adequações e organização de infraestrutura.</p>
-          </article>
-
-          <article class="card">
-            <div class="card__icon">🧵</div>
-            <h3>Infraestrutura de Dados</h3>
-            <p>Rede, cabeamento, patch panel, identificação, racks e organização do cabeamento.</p>
-          </article>
-
-          <article class="card">
-            <div class="card__icon">🛠️</div>
-            <h3>Manutenção Predial</h3>
-            <p>Preventiva/corretiva com checklist e atendimento rápido para manter tudo rodando.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOBRE -->
-    <section class="section section--dark" id="sobre">
-      <div class="container about">
-        <div>
-          <h2>Sobre a SIMAU</h2>
-          <p>
-            Somos uma empresa focada em entrega com padrão e responsabilidade:
-            planejamento, execução, documentação e finalização.
-          </p>
-          <ul class="list">
-            <li>📌 Organização de obra e limpeza</li>
-            <li>📌 Segurança e boas práticas</li>
-            <li>📌 Comunicação clara do andamento</li>
-            <li>📌 Garantia e suporte pós-obra</li>
-          </ul>
-        </div>
-
-        <div class="about__box">
-          <h3>Como trabalhamos</h3>
-          <ol class="steps">
-            <li>Vistoria / briefing</li>
-            <li>Escopo + orçamento</li>
-            <li>Cronograma + execução</li>
-            <li>Entrega + checklist final</li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJETOS -->
-    <section class="section" id="projetos">
-      <div class="container">
-        <div class="section__head">
-          <h2>Projetos</h2>
-          <p>Coloque aqui fotos reais dos serviços (antes/depois) para aumentar conversão.</p>
-        </div>
-
-        <div class="gallery">
-          <div class="ph">📷 Foto 1</div>
-          <div class="ph">📷 Foto 2</div>
-          <div class="ph">📷 Foto 3</div>
-          <div class="ph">📷 Foto 4</div>
-          <div class="ph">📷 Foto 5</div>
-          <div class="ph">📷 Foto 6</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section class="section section--cta" id="contato">
-      <div class="container cta">
-        <div>
-          <h2>Vamos fazer seu orçamento?</h2>
-          <p>
-            Me diga cidade, tipo de serviço e prazo. Respondo com perguntas rápidas e já te passo o caminho.
-          </p>
-        </div>
-
-        <div class="cta__box">
-          <form class="form" id="form">
-            <label>
-              Nome
-              <input name="nome" placeholder="Seu nome" required />
-            </label>
-
-            <label>
-              WhatsApp
-              <input name="whats" placeholder="(11) 99999-9999" required />
-            </label>
-
-            <label>
-              Mensagem
-              <textarea name="msg" rows="4" placeholder="Ex: reforma de sala + elétrica + pontos de rede..." required></textarea>
-            </label>
-
-            <button class="btn" type="submit">Enviar no WhatsApp</button>
-
-            <p class="hint">* O botão abre o WhatsApp já com a mensagem pronta.</p>
-          </form>
-
-          <div class="contact">
-            <p><strong>Contato direto</strong></p>
-            <p>📞 WhatsApp: <span id="whatsText">SEU_NUMERO_AQUI</span></p>
-            <p>✉️ E-mail: <span>seuemail@dominio.com</span></p>
-            <p>📍 Região: <span>Sua cidade / SP</span></p>
+          <div class="trust__item">
+            <span class="trust__big">Padrão profissional</span>
+            <span class="trust__small">Qualidade e compromisso</span>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- Clickable icons -->
+      <section class="heroicons" aria-label="Atalhos de serviços">
+        <button class="iconcard" data-service="reformas" type="button">
+          <div class="iconcard__icon">🏗️</div>
+          <div class="iconcard__label">Reformas & Obras</div>
+        </button>
+
+        <button class="iconcard" data-service="eletrica" type="button">
+          <div class="iconcard__icon">⚡</div>
+          <div class="iconcard__label">Instalações Elétricas</div>
+        </button>
+
+        <button class="iconcard" data-service="dados" type="button">
+          <div class="iconcard__icon">🧰</div>
+          <div class="iconcard__label">Infra de Dados</div>
+        </button>
+
+        <button class="iconcard" data-service="manutencao" type="button">
+          <div class="iconcard__icon">🛠️</div>
+          <div class="iconcard__label">Manutenção Predial</div>
+        </button>
+      </section>
+
+      <div class="slogan">QUALIDADE E COMPROMISSO EM CADA PROJETO</div>
+    </div>
   </main>
+
+  <!-- Serviços -->
+  <section id="servicos" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Serviços</h2>
+        <p>Do planejamento à entrega — execução com padrão e organização.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Reformas & Obras</h3>
+          <ul class="list">
+            <li>Reforma de ambientes corporativos e residenciais</li>
+            <li>Drywall, pintura, pisos, revestimentos</li>
+            <li>Adequações e melhorias</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Instalações Elétricas</h3>
+          <ul class="list">
+            <li>Quadros, circuitos, tomadas e iluminação</li>
+            <li>Correções e modernizações</li>
+            <li>Organização e identificação</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Infraestrutura de Dados</h3>
+          <ul class="list">
+            <li>Cabeamento estruturado</li>
+            <li>Patch panel, racks e organização</li>
+            <li>Passagem e infraestrutura</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Manutenção Predial</h3>
+          <ul class="list">
+            <li>Preventiva e corretiva</li>
+            <li>Pequenos reparos e ajustes</li>
+            <li>Apoio em melhorias contínuas</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfólio -->
+  <section id="portfolio" class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <h2>Portfólio</h2>
+        <p>Alguns trabalhos (coloque fotos reais aqui — passa muita confiança).</p>
+      </div>
+
+      <div class="gallery">
+        <figure class="shot"><div class="shot__ph" data-ph="Foto 01"></div></figure>
+        <figure class="shot"><div class="shot__ph" data-ph="Foto 02"></div></figure>
+        <figure class="shot"><div class="shot__ph" data-ph="Foto 03"></div></figure>
+        <figure class="shot"><div class="shot__ph" data-ph="Foto 04"></div></figure>
+        <figure class="shot"><div class="shot__ph" data-ph="Foto 05"></div></figure>
+        <figure class="shot"><div class="shot__ph" data-ph="Foto 06"></div></figure>
+      </div>
+
+      <div class="note">
+        Dica: quando você tiver as imagens, eu te passo um jeito simples de “trocar os placeholders” por fotos de verdade.
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section">
+    <div class="container">
+      <div class="contact">
+        <div>
+          <h2>Contato</h2>
+          <p class="muted">Chama no WhatsApp e já manda: cidade, tipo de serviço e fotos do local.</p>
+
+          <div class="contact__box">
+            <div class="contact__row">
+              <span class="badge">Atendimento</span>
+              <span>São Paulo e região (ajustamos conforme sua atuação)</span>
+            </div>
+            <div class="contact__row">
+              <span class="badge">WhatsApp</span>
+              <a id="ctaContato" class="link" href="#" target="_blank" rel="noreferrer">Abrir conversa</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ctaCard">
+          <h3>Quer orçamento rápido?</h3>
+          <p>Eu já deixei uma mensagem pronta. Só clicar.</p>
+          <a class="btn btn--primary" id="ctaCard" href="#" target="_blank" rel="noreferrer">Solicitar no WhatsApp</a>
+          <div class="ctaCard__small">Resposta mais rápida enviando fotos e localização.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <span>© <span id="year"></span> SIMAU Soluções Integradas Ltda.</span>
-      <span class="muted">Construção • Reforma • Elétrica • Dados • Manutenção</span>
+      <div>
+        <strong>SIMAU Soluções Integradas Ltda.</strong>
+        <div class="muted">Construção • Reforma • Elétrica • Dados • Manutenção</div>
+      </div>
+      <div class="muted">© <span id="year"></span> SIMAU</div>
     </div>
   </footer>
 
-  <!-- WhatsApp flutuante -->
-  <a class="wapp" id="wapp" href="#" aria-label="Chamar no WhatsApp">💬</a>
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__overlay" data-close="true"></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" id="modalClose" aria-label="Fechar">✕</button>
+      <div class="modal__icon" id="modalIcon" aria-hidden="true">⚙️</div>
+      <h3 id="modalTitle">Serviço</h3>
+      <p class="muted" id="modalDesc"></p>
+
+      <div class="modal__bullets" id="modalBullets"></div>
+
+      <div class="modal__actions">
+        <a class="btn btn--primary" id="modalCTA" href="#" target="_blank" rel="noreferrer">Pedir orçamento</a>
+        <button class="btn btn--ghost" data-close="true" type="button">Fechar</button>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
